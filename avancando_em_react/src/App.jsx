@@ -1,6 +1,7 @@
 import "./App.css";
 
 import GoldenGate from "./assets/golden-gate.jpg";
+import ManageData from "./components/ManageData";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       </div>
       {/* Imagem em assets */}
       <img src={GoldenGate} alt="Golden Gate" />
+      <ManageData />
     </div>
   );
 }
