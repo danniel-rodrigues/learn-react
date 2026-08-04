@@ -1,6 +1,7 @@
 import "./App.css";
 
 import GoldenGate from "./assets/golden-gate.jpg";
+import ConditionalRender from "./components/ConditionalRender";
 import ListRender from "./components/ListRender";
 import ManageData from "./components/ManageData";
 
@@ -16,6 +17,7 @@ function App() {
       <img src={GoldenGate} alt="Golden Gate" />
       <ManageData />
       <ListRender />
+      <ConditionalRender />
     </div>
   );
 }
