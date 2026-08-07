@@ -4,6 +4,7 @@ import GoldenGate from "./assets/golden-gate.jpg";
 import CarDetails from "./components/CarDetails";
 import ConditionalRender from "./components/ConditionalRender";
 import Container from "./components/Container";
+import ExecuteFunction from "./components/ExecuteFunction";
 import Fragment from "./components/Fragment";
 import ListRender from "./components/ListRender";
 import ManageData from "./components/ManageData";
@@ -17,6 +18,10 @@ function App() {
     { id: 2, brand: "KIA", color: "Branco", km: 3434, newCar: false },
     { id: 3, brand: "Renault", color: "Azul", km: 1234, newCar: false },
   ];
+
+  function showMessage() {
+    console.log("Evento do componente pai!");
+  }
 
   return (
     <div className="App">
@@ -58,6 +63,9 @@ function App() {
       <Container myValue="testing 2">
         <h5>Testando o container</h5>
       </Container>
+
+      {/* Executar função */}
+      <ExecuteFunction myFunction={showMessage} />
     </div>
   );
 }
