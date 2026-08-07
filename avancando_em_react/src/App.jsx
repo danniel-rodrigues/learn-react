@@ -3,6 +3,7 @@ import "./App.css";
 import GoldenGate from "./assets/golden-gate.jpg";
 import CarDetails from "./components/CarDetails";
 import ConditionalRender from "./components/ConditionalRender";
+import Container from "./components/Container";
 import Fragment from "./components/Fragment";
 import ListRender from "./components/ListRender";
 import ManageData from "./components/ManageData";
@@ -49,6 +50,14 @@ function App() {
 
       {/* Fragment */}
       <Fragment propFragment="teste" />
+
+      {/* Children */}
+      <Container myValue="testing">
+        <p>E este é o conteúdo</p>
+      </Container>
+      <Container myValue="testing 2">
+        <h5>Testando o container</h5>
+      </Container>
     </div>
   );
 }
