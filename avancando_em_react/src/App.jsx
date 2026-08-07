@@ -3,6 +3,7 @@ import "./App.css";
 import GoldenGate from "./assets/golden-gate.jpg";
 import CarDetails from "./components/CarDetails";
 import ConditionalRender from "./components/ConditionalRender";
+import Fragment from "./components/Fragment";
 import ListRender from "./components/ListRender";
 import ManageData from "./components/ManageData";
 import ShowUserName from "./components/ShowUserName";
@@ -45,6 +46,9 @@ function App() {
           newCar={car.newCar}
         />
       ))}
+
+      {/* Fragment */}
+      <Fragment propFragment="teste" />
     </div>
   );
 }
