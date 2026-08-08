@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 
 import GoldenGate from "./assets/golden-gate.jpg";
@@ -9,6 +10,8 @@ import Fragment from "./components/Fragment";
 import ListRender from "./components/ListRender";
 import ManageData from "./components/ManageData";
 import ShowUserName from "./components/ShowUserName";
+import Message from "./components/Message";
+import ChangeMessageState from "./components/ChangeMessageState";
 
 function App() {
   const name = "Alessandra";
@@ -22,6 +25,12 @@ function App() {
   function showMessage() {
     console.log("Evento do componente pai!");
   }
+
+  const [message, setMessage] = useState("");
+
+  const handleMessage = (msg) => {
+    setMessage(msg);
+  };
 
   return (
     <div className="App">
@@ -66,6 +75,10 @@ function App() {
 
       {/* Executar função */}
       <ExecuteFunction myFunction={showMessage} />
+
+      {/* State lift */}
+      <Message msg={message} />
+      <ChangeMessageState handleMessage={handleMessage} />
     </div>
   );
 }
